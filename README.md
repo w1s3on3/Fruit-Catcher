@@ -17,6 +17,11 @@ The game is implemented in Python and uses Pygame library for the graphics and i
 - Game ends when player misses a fruit 
 - Configurable options in config.py file
 
+## Installation / Starting the game.
+
+- pip install pygame
+- python main.py
+
 ## Configuration
 
 The game's behavior can be customized by modifying the options in the `config.py` file. 
