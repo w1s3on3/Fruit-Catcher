@@ -1,3 +1,7 @@
+# File: main.py
+# Author: Paul Wyers
+# License: GNU General Public License v3.0 (GPLv3)
+
 import sys
 import random
 import pygame

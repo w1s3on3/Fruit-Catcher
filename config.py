@@ -1,3 +1,7 @@
+# File: config.py
+# Author: Paul Wyers
+# License: GNU General Public License v3.0 (GPLv3)
+
 # Configuration settings
 import pygame
 

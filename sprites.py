@@ -1,3 +1,7 @@
+# File: sprites.py
+# Author: Paul Wyers
+# License: GNU General Public License v3.0 (GPLv3)
+
 import pygame
 import random
 from config import PLAYER_SPEED, MAX_FRUITS, MAX_MISSED, INITIAL_FRUIT_SPEED, SCREEN_WIDTH, SCREEN_HEIGHT, FRUIT_FALL_DELAY, PLAYER_Y_OFFSET
