@@ -4,7 +4,7 @@
 
 import pygame
 import random
-from config import PLAYER_SPEED, MAX_FRUITS, MAX_MISSED, INITIAL_FRUIT_SPEED, SCREEN_WIDTH, SCREEN_HEIGHT, FRUIT_FALL_DELAY, PLAYER_Y_OFFSET
+from config import PLAYER_SPEED, MAX_FRUITS, MAX_MISSED, INITIAL_FRUIT_SPEED, SCREEN_WIDTH, SCREEN_HEIGHT, FRUIT_FALL_DELAY, PLAYER_Y_OFFSET, CATCH_SOUND, MISS_SOUND
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, image):
@@ -47,6 +47,9 @@ class Fruit(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.level = level
         self.level_difficulty = level_difficulty
+        
+        self.catch_sound = pygame.mixer.Sound(CATCH_SOUND)
+        self.miss_sound = pygame.mixer.Sound(MISS_SOUND)
 
         if self.rect.width > SCREEN_WIDTH:
             self.rect.width = SCREEN_WIDTH
@@ -60,7 +63,6 @@ class Fruit(pygame.sprite.Sprite):
         else:
             self.speed = random.uniform(1, int(INITIAL_FRUIT_SPEED * self.level_difficulty))
 
-
     def update(self):
         self.rect.y += self.speed  # Update vertical position based on speed
         if self.rect.x < 0:  # Check if sprite goes off the left edge of the screen
@@ -68,4 +70,8 @@ class Fruit(pygame.sprite.Sprite):
         elif self.rect.x > SCREEN_WIDTH - self.rect.width:  # Check if sprite goes off the right edge of the screen
             self.rect.x = SCREEN_WIDTH - self.rect.width  # Set x position to the rightmost possible value
 
+    def play_catch_sound(self):
+        self.catch_sound.play()
 
+    def play_miss_sound(self):
+        self.miss_sound.play()

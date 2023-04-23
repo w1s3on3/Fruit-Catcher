@@ -2,6 +2,10 @@
 
 Fruit Catcher is a simple Python game developed by Paul Wyers.
 
+## Updates
+
+- 24/04/2023 : Sound effects added.
+
 ## Description
 
 Fruit Catcher is a game where the player controls a basket at the bottom of the screen to catch falling fruits. 
@@ -54,12 +58,16 @@ The `config.py` file includes the following options:
 - `PLAYER_Y_OFFSET`: Vertical offset for player position
 - `FRUIT_FALL_DELAY`: Delay between fruit falling in milliseconds
 
+- `CATCH_SOUND` : Sound for when you catch the fruit
+- `MISS_SOUND` : Sound for when you miss a fruit
+
 - `DEBUG`: Boolean value to enable or disable debug mode
 
 ## Credits
 
 - Game developed by: [Paul Wyers](https://github.com/w1s3on3/) 
 - Pygame library: [https://www.pygame.org/](https://www.pygame.org/)
+- Game sounds from: [https://opengameart.org/](https://opengameart.org/content/interface-sounds-starter-pack)
 
 ## License
 

@@ -40,7 +40,7 @@ BROWN = (165, 42, 42)
 FONT_SIZE = 36
 
 # Images
-BACKGROUND_IMAGE = "images/background.jpg"
+BACKGROUND_IMAGE = "images/background.png"
 PLAYER_IMAGE = "images/basket.png"
 PLAYER_IMAGE_SIZE = (50, 50)
 FRUIT_IMAGES = [
@@ -53,5 +53,9 @@ FRUIT_IMAGES = [
 PLAYER_Y_OFFSET = 10
 FRUIT_FALL_DELAY = 100
 
+# Sounds
+CATCH_SOUND = "sound/catch.ogg"
+MISS_SOUND = "sound/miss.ogg"
+
 # Debug mode
-DEBUG = True
+DEBUG = False

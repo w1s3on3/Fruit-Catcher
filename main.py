@@ -120,6 +120,7 @@ while not game_over:
         for fruit in caught_fruits:
             if fruit.rect.colliderect(player.rect.left, player.rect.top, player.rect.width, player.rect.height / 2): 
                 fruits_caught += 1
+                fruit.play_catch_sound()
                 if fruits_caught >= level * NEW_LEVEL:
                     level += 1
                     for fruit in fruits:
@@ -127,6 +128,8 @@ while not game_over:
             else:
                 # Fruit is missed
                 fruits_missed += 1
+                fruit.play_miss_sound()
+                fruit.kill()
                 if DEBUG:
                     print(f"Missed fruit")
 
@@ -137,6 +140,7 @@ while not game_over:
         for fruit in fruits:
             if fruit.rect.top > SCREEN_HEIGHT:
                 fruits_missed += 1
+                fruit.play_miss_sound()
                 fruit.kill()
                 if DEBUG:
                     print(f"Fruit missed")
