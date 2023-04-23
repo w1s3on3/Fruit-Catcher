@@ -34,8 +34,6 @@ class Player(pygame.sprite.Sprite):
         self.rect.clamp_ip(pygame.Rect(0, 0, self.screen_width, pygame.display.Info().current_h)) # Restrict player position within screen boundaries
 
     def reset(self):
-        # Implement reset logic here
-        # For example, reset the position of the player to the center of the screen
         self.rect.x = self.screen_width // 2 - self.rect.width // 2
         self.rect.y = self.screen_height - self.rect.height - PLAYER_Y_OFFSET
 
