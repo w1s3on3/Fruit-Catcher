@@ -92,15 +92,13 @@ while not game_over:
         if event.type == pygame.QUIT:
             game_over = True
         elif event.type == pygame.KEYDOWN:  # Check for key presses
-            #if event.key == pygame.K_p:  # Pause game
             if event.key == PAUSE_KEY:  # Pause game
                 paused = not paused # Toggle pause state
 
     screen.blit(bg, (0, 0)) # Draw background image
 
     if not paused: # If game is not paused
- 
- # using predefined LEFT_KEY and RIGHT_KEY variables from config.py file to move the player
+        # using predefined LEFT_KEY and RIGHT_KEY variables from config.py file to move the player
         keys = pygame.key.get_pressed()
         if keys == LEFT_KEY:
             player.move_left()
